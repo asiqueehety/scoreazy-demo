@@ -4,7 +4,7 @@
   --primary-color: #f3eae5;
   --text-dark: #2c2724;
   --white: #ffffff;
-  --max-width: 1200px;
+  --max-width: 1300px;
 }
 
 * {
@@ -52,8 +52,8 @@ nav {
 
 .nav__logo a {
   font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-dark);
+  font-weight: 800;
+  color: var(--white);
 }
 
 .nav__menu__btn {
@@ -98,6 +98,17 @@ nav {
 }
 
 .container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 0;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+#hero_container{
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 0;
@@ -172,19 +183,14 @@ nav {
   justify-content: center;
 }
 
-.tent-1 {
+.physics {
   max-width: 300px;
   transform: translateX(1rem);
   border-radius: 1rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-.tent-2 {
-  max-width: 180px;
-  transform: translateX(-1rem);
-  border-radius: 1rem;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-}
+
 
 .content {
   padding-block: 0 5rem;
@@ -314,6 +320,7 @@ nav {
     grid-template-columns: 2fr 3fr;
     align-items: center;
     padding: 2rem 0;
+
   }
 
   .container__left {
@@ -337,15 +344,10 @@ nav {
     flex-direction: column;
   }
 
-  .tent-1 {
+  .physics {
     width: calc(100% + 10rem);
     max-width: 325px;
     transform: translate(-2rem, 2rem);
-  }
-
-  .tent-2 {
-    max-width: 200px;
-    transform: translate(4rem, -1rem);
   }
 
   .content {
@@ -355,3 +357,500 @@ nav {
     margin-inline-start: unset;
   }
 }
+
+.section {
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: row;
+    background: var(--white);
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+    letter-spacing: 1px;
+  }
+  
+  /* --- What the Course Offers --- */
+
+
+  #title
+  {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--white);
+    letter-spacing: 1px;
+  }
+  #offers_container
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  #offers
+  {
+    background-color: #1f1f1f;
+    margin-top: 30vh;
+  }
+
+  .offer-cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-rows: 1fr;
+    margin-top: 1rem;
+  }
+  
+  .offer-cards .card {
+    background: #fff6f1;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+  
+  .offer-cards .card .icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  
+  .offer-cards .card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  .offer-cards .card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+  }
+  
+  /* --- How It Works / Steps --- */
+
+  #process_container
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .steps {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-rows: 1fr;
+    margin-top: 1rem;
+  }
+  
+  .steps .step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem;
+    background: var(--primary-color);
+    border-radius: 1rem;
+    position: relative;
+  }
+  
+  .step-number {
+    background: var(--text-dark);
+    color: var(--white);
+    font-weight: 700;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    font-size: 1rem;
+  }
+  
+  .steps .step h4 {
+    margin: 0 0 0.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+  
+  .steps .step p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+  }
+  
+  /* --- Testimonials --- */
+
+  #testimonials_container
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .testimonial-cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+  }
+  
+  .testimonial {
+    background: var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+  }
+  
+  .testimonial .quote {
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .testimonial .meta {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    align-self: flex-end;
+  }
+  
+  /* --- Instructor --- */
+
+  #instructor
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #372929;
+    color: #f1f1f1;
+  }
+
+  #inst-title{
+    display: flex;
+    color: white;
+    font-size: 3rem;
+  }
+
+  #instructor_container
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .instructor-profile {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .instructor-profile .photo img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--white);
+  }
+  
+  .instructor-profile .bio {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .instructor-profile h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+  
+  .instructor-profile p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--white);
+    line-height: 1.5rem;
+  }
+  
+  /* --- Pricing & Enrollment --- */
+  .pricing-card {
+    background: var(--primary-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .price-tag {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+  
+  .duration {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+  }
+  
+  .pricing-card .includes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .pricing-card .includes li {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    position: relative;
+    padding-left: 1.25rem;
+  }
+  
+  .pricing-card .includes li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+  
+  .pricing-card .cta {
+    margin: 1rem 0;
+  }
+  
+  .btn.primary {
+    background-color: var(--text-dark);
+    color: var(--white);
+    padding: 0.85rem 1.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .btn.primary:hover {
+    background: #3f3731;
+  }
+  
+  .note {
+    font-size: 0.85rem;
+    color: #555;
+  }
+  
+  /* --- FAQ --- */
+  .faqs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .faq-item {
+    background: var(--primary-color);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  }
+  
+  .faq-question {
+    width: 100%;
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-dark);
+  }
+  
+  .faq-question::after {
+    content: "+";
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-question.open::after {
+    content: "−";
+    transform: rotate(0deg);
+  }
+  
+  .faq-answer {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+  }
+  
+
+  /* --- Footer --- */
+  .site-footer {
+    background: #1f1f1f;
+    color: #f1f1f1;
+    padding: 3rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .site-footer .inner {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-top {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+  
+  .brand h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .brand p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  
+  .links h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .links li {
+    margin: 0.4rem 0;
+  }
+  
+  .links a {
+    color: #ccc;
+  }
+  
+  .links a:hover {
+    color: var(--white);
+  }
+  
+  .social .icons {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  
+  .social a {
+    color: #ccc;
+    font-size: 1.25rem;
+  }
+  
+  .social a:hover {
+    color: var(--white);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+  }
+  
+  /* --- Responsive wider layouts --- */
+  @media (min-width: 768px) {
+    .offer-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .testimonial-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .instructor-profile {
+      grid-template-columns: 150px 1fr;
+    }
+    .pricing-card {
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+    }
+    .price-tag {
+      flex: 1;
+      text-align: left;
+    }
+    .pricing-card .includes {
+      flex: 2;
+    }
+    .pricing-card .cta {
+      flex: 1;
+    }
+    .faq-item {
+      max-width: 800px;
+    }
+    .footer-top {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .offer-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .steps {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    .testimonial-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
